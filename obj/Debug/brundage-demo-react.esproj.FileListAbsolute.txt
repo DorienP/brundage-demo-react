@@ -1,0 +1,2 @@
+C:\Users\Dorie\Code\brundage-demo-react\brundage-demo-react\brundage-demo-react\obj\Debug\brundage-demo-react.esproj.SuggestedBindingRedirects.cache
+C:\Users\Dorie\Code\brundage-demo-react\brundage-demo-react\brundage-demo-react\obj\Debug\brundage-demo-react.esproj.CoreCompileInputs.cache
