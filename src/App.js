@@ -1,7 +1,5 @@
-import './App.css';
-import axios from 'axios';
-//const axios = require('axios').default;
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
 
@@ -86,13 +84,13 @@ function App() {
     )
 
     return (
-        <div className="App">
+        <div className="App d-flex flex-column align-items-center">
             <img className="w-50" src="/brundage.jpg" alt=""></img>
             <h1>Clients</h1>
             <div className="row">
             </div>
 
-            <table className="m-auto table table-striped table-bordered">
+            <table className="m-auto w-50 table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Id
