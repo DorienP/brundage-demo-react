@@ -71,7 +71,6 @@ function App() {
         try {
             const response = await axios.get(`/GetClientsByIpAddress?ip_address=${ipAddress}`);
             setClients(response.data);
-            console.log(ipAddress, response.data);
         }
         catch (error) {
             console.error(error);
@@ -80,7 +79,6 @@ function App() {
 
     useEffect(() => {
         getAllClients();
-        console.log(clients);
     },
         []
     )
