@@ -71,6 +71,7 @@ function App() {
         try {
             const response = await axios.get(`/GetClientsByIpAddress?ip_address=${ipAddress}`);
             setClients(response.data);
+            console.log(ipAddress, response.data);
         }
         catch (error) {
             console.error(error);
@@ -79,48 +80,49 @@ function App() {
 
     useEffect(() => {
         getAllClients();
+        console.log(clients);
     },
         []
     )
 
     return (
-        <div className="App d-flex flex-column align-items-center">
-            <img className="w-50" src="/brundage.jpg" alt=""></img>
-            <h1>Clients</h1>
-            <div className="row">
+        <div className="App" >
+            <div content="width=device-width">
+                <img className="w-50 d-block mx-auto" src="/brundage.jpg" data-at2x="/brundage.jpg" alt=""></img>
+                    <h1 className="text-center">Clients</h1>
             </div>
 
             <table className="m-auto w-50 table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Id
-                            <form className="form-inline ml-2 d-inline">
-                                <input className="id form-control w-1" type="search" placeholder="Search(Integer)" />
-                                <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); getClientById(); }}>Search</button>
+                            <form className="form-inline ml-2 m-auto">
+                                <input className="id form-control" type="search" placeholder="Search(Integer)" />
+                                <button className="btn btn-outline-success mx-auto d-block" type="submit" onClick={(e) => { e.preventDefault(); getClientById(); }}>Search</button>
                             </form>
                         </th>
                         <th>First Name
-                            <form className="form-inline ml-2 d-inline">
-                                <input className="fn form-control w-1" type="search" placeholder="Search(String)" />
-                                <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); getClientsByFirstName(); }}>Search</button>
+                            <form className="form-inline ml-2  m-auto">
+                                <input className="fn form-control" type="search" placeholder="Search(String)" />
+                                <button className="btn btn-outline-success mx-auto d-block" type="submit" onClick={(e) => { e.preventDefault(); getClientsByFirstName(); }}>Search</button>
                             </form>
                         </th>
                         <th>Last Name
-                            <form className="form-inline ml-2 d-inline">
-                                <input className="ln form-control w-1" type="search" placeholder="Search(String)" />
-                                <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); getClientsByLastName(); }} >Search</button>
+                            <form className="form-inline ml-2 m-auto">
+                                <input className="ln form-control" type="search" placeholder="Search(String)" />
+                                <button className="btn btn-outline-success mx-auto d-block" type="submit" onClick={(e) => { e.preventDefault(); getClientsByLastName(); }} >Search</button>
                             </form>
                         </th>
                         <th>Email
-                            <form className="form-inline ml-2 d-inline">
-                                <input className="em form-control w-1" type="search" placeholder="Search(String)" />
-                                <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); getClientsByEmail(); }}>Search</button>
+                            <form className="">
+                                <input className="em form-control" type="search" placeholder="Search(String)" />
+                                <button className="btn btn-outline-success mx-auto d-block" type="submit" onClick={(e) => { e.preventDefault(); getClientsByEmail(); }}>Search</button>
                             </form>
                         </th>
                         <th>Ip Address
-                            <form className="form-inline ml-2 d-inline">
-                                <input className=" ip form-control w-1" type="search" placeholder="Search(String)" />
-                                <button className="btn btn-outline-success" type="submit" onClick={(e) => { e.preventDefault(); getClientsByIpAddress(); }}>Search</button>
+                            <form className="form-inline ml-2 m-auto">
+                                <input className=" ip form-control" type="search" placeholder="Search(String)" />
+                                <button className="btn btn-outline-success mx-auto d-block" type="submit" onClick={(e) => { e.preventDefault(); getClientsByIpAddress(); }}>Search</button>
                             </form>
                         </th>
                     </tr>
