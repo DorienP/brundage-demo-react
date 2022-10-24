@@ -87,7 +87,7 @@ function App() {
         <div className="App" >
             <div content="width=device-width">
                 <img className="w-50 d-block mx-auto" src="/brundage.jpg" data-at2x="/brundage.jpg" alt=""></img>
-                    <h1 className="text-center">Clients</h1>
+                <h1 className="text-center">Clients</h1>
             </div>
 
             <table className="m-auto w-50 table table-striped table-bordered">
@@ -144,6 +144,7 @@ function App() {
                         </tr >}
                 </tbody>
             </table>
+            {(clients.length === 0) ? <div className="d-flex justify-content-center">No Data Found</div> : <></>}
         </div>
     );
 }
