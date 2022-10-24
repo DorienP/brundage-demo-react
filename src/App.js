@@ -5,7 +5,7 @@ function App() {
 
     const [clients, setClients] = useState([]);
 
-    axios.defaults.baseURL = "http://localhost:7008/api";
+    axios.defaults.baseURL = BASE_URL;
 
     async function getAllClients() {
         setClients([]);
