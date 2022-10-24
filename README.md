@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Everything is on the App page to reduce abstraction while reviewing.
 
 Further plans to develop would be:
-- Restructure DOM with Components
+- Restructure DOM with React Components
 - Refactor WET code in the request methods
 
 ## Available Scripts
