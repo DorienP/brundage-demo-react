@@ -6,7 +6,7 @@ Everything is on the App page to reduce abstraction while reviewing.
 
 Further plans to develop would be:
 - Restructure DOM with Components
-- Reduce WET code in the request methods
+- Refactor WET code in the request methods
 
 ## Available Scripts
 
