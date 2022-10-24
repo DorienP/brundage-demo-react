@@ -5,7 +5,7 @@ function App() {
 
     const [clients, setClients] = useState([]);
 
-    axios.defaults.baseURL = BASE_URL;
+    axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
     async function getAllClients() {
         setClients([]);
